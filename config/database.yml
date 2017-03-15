@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
-  database: splurty_production
-  # username: splurty
-  # password: <%= ENV['SPLURTY_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  # database: splurty_production
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>

@@ -1,4 +1,8 @@
 @import "bootstrap";
+//@import url('https://fonts.googleapis.com/css?family=Lemonada|Ranga');
+
+//font-family: 'Ranga', cursive;
+//font-family: 'Lemonada', cursive;
 
 .clear {
   clear: both;
@@ -6,6 +10,7 @@
 .circle {
     font-weight:bold;
     font-style: italic;
+    font-family: 'cinzel_decorativeregular';
     position: relative;
     border-radius: 100%;
     background: #f84342;
@@ -23,7 +28,7 @@
     -webkit-transform:rotate(11deg); /* Opera, Chrome, and Safari */
 }
 .slogan {
-  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-family: 'cinzel_decorativebold';
   font-style: italic;
   padding-top: 26px;
 }
@@ -31,6 +36,7 @@
   padding-top: 26px;
 }
 .links a {
+  font-family: 'cinzel_decorativebold';
   color: black;
   font-size: 25px;
   border-bottom: 1px solid #dfdfdf;
@@ -40,4 +46,13 @@ header {
 }
 hr {
   clear: both;
+}
+h1 {
+  font-family: 'cinzelregular';
+  font-weight: bold;
+  font-size: 48px;
+}
+h2 {
+  font-family: 'cinzelregular';
+  font-style: italic;
 }

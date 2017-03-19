@@ -67,3 +67,31 @@ p {
   font-family: 'cinzelregular';
   font-size: 14px;
 }
+.footer-blurb {
+  text-align: right;
+}
+.new_quote {
+  font-family: 'cinzelregular';
+  font-size: 26px;
+}
+#myModalLabel {
+  font-family: 'cinzel_decorativebold';
+  font-size: 16px;
+}
+.splutry-paragraph {
+  font-family: 'cinzelbold';
+  font-size: 16px;
+}
+.splutry-id {
+  color: #666666;
+  font-family: 'cinzelregular';
+}
+::selection {
+  background-color: #f84342;
+}
+@media (max-width: 750px) {
+  .footer-blurb {
+    text-align: left;
+  }
+  
+}

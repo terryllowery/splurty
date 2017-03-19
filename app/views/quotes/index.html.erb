@@ -1,2 +1,34 @@
+<p class="splutry-paragraph">
+  <span class="splutry-id">Spurty No. <%= @quote.id %> </span> - You know life is great when...
+</p>
 <h1><%= @quote.saying %></h1>
-<h2>--<%= @quote.author %></h2>
+<h2 class="float-right">--<%= @quote.author %></h2>
+
+<br />
+<br />
+<br />
+<br />
+
+
+<% require 'net/http' %>
+<% require 'json' %>
+<% uri = URI('http://api.forismatic.com/api/1.0/') %>
+<% params = {method: 'getQuote', lang: 'en', format: 'json'} %>
+<% uri.query = URI.encode_www_form(params)%>
+<% res = Net::HTTP.get_response(uri) %>
+<% if res.body%>
+    <% json_response = JSON.parse(res.body) %>
+    <p>We just pulled this one fresh from <a href=" http://forismatic.com">A cool place to make API calls for quotes.</a><br />
+      Quote: <%= quote = json_response['quoteText'] %><br />
+      Author: <%= author = json_response['quoteAuthor'] %><br />
+      Link: <%= link_to json_response['quoteLink'] %>
+      <% if author == "" %>
+        <% author = "Unknown" %>
+      <% end %>
+
+    </p>
+    <% Quote.create(saying: quote, author: author) %>
+<% end %>
+
+
+

@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'quotes#index'
   resources :quotes
   get 'about', to: 'quotes#about'
+
+  get 'call_api', to: 'quotes#call_api'
 end

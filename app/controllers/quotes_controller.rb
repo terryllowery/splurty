@@ -5,7 +5,7 @@ class QuotesController < ApplicationController
   def index
     @quote = Quote.order("RANDOM()").first
     # Calling for a new quote from forismatic.com every page load
-    call_api
+    # call_api
   end
 
   def create

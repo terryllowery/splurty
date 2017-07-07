@@ -6,6 +6,15 @@ class QuotesController < ApplicationController
     @quote = Quote.order("RANDOM()").first
     # Calling for a new quote from forismatic.com every page load
     # call_api
+
+    # This seeds DB if empty
+    if @quote.nil?
+      for i in 0..10
+        call_api
+        sleep 1
+      end
+    end
+        
   end
 
   def create
